@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'data_mapper'
+require 'server'
 
 class Chitter < Sinatra::Base
   get '/' do
