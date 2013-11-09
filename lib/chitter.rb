@@ -1,10 +1,13 @@
 require 'sinatra/base'
-require 'data_mapper'
 require 'server'
 
 class Chitter < Sinatra::Base
+
+  set :views, File.join(File.dirname(__FILE__), '..', 'views')
+  
   get '/' do
-    'Hello Chitter!'
+    @peeps = Peep.all
+    erb :index
   end
 
   # start the server if ruby file executed directly
