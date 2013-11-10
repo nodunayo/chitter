@@ -50,6 +50,12 @@ class Chitter < Sinatra::Base
     end
   end
 
+  post '/logout' do
+    flash[:notice] = "Goodbye, hope to peep you soon!"
+    session[:user_id] = nil
+    redirect to('/')
+  end
+
 
 helpers do
 

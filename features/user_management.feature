@@ -35,3 +35,10 @@ Feature: In order to be able to post peeps
                 When Enrique signs in with the incorrect password
                 Then I should not see "Hi, Enrique!"
                 And I should see "The username or password are incorrect. Please try again."
+
+        Scenario: Enrique signs in and then signs out
+                Given Enrique is an existing user
+                When Enrique signs in with the correct username and password
+                Then Enrique signs out
+                Then I should not see "Hi, Enrique!"
+                And I should see "Goodbye, hope to peep you soon!"

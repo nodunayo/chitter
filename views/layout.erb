@@ -12,10 +12,16 @@
       Peep
     </header>
     <body>
-  <% if current_user %>
-    Hi, <%= current_user.first_name %>!
-  <% end %>
-    <%= yield %>
-  </body>
+      <% if flash[:notice] %>
+        <div id="notice"><%= flash[:notice] %></div>
+      <% end %>
+      <% if current_user %>
+        Hi, <%= current_user.first_name %>!
+      <form method="post" action="/logout">
+        <input type="submit" value="Sign out">
+      </form>
+      <% end %>
+      <%= yield %>
+    </body>
 
 </html>

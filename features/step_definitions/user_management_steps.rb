@@ -61,3 +61,7 @@ When(/^Enrique signs in with the incorrect password$/) do
   fill_in :password, :with => 'nots3cr3t'
   click_button('Sign in')
 end
+
+Then(/^Enrique signs out$/) do
+  click_button('Sign out')
+end
