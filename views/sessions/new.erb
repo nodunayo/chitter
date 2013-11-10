@@ -1,0 +1,13 @@
+<% if flash[:errors] && !flash[:errors].empty? %> 
+  <ul id="error">
+    <% flash[:errors].each do |error| %>
+      <li><%= error %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/sessions" method="post">
+Username: <input name="username" type="text">
+Password: <input name="password" type="password">
+<input type ="submit" value="Sign in">
+</form>

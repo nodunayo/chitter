@@ -41,3 +41,23 @@ When(/^Nadia signs up with the same username as Enrique$/) do
   fill_in :password_confirmation, :with => 's3cr3t'
   click_button('Sign up')
 end
+
+Given(/^Enrique is an existing user$/) do
+  User.create(first_name: 'Enrique', last_name: 'Comba Riepenhausen', 
+                    email: 'ecomba@makersacademy.com', username:'ecomba', password: 's3cr3t',
+                    password_confirmation: 's3cr3t')  
+end
+
+When(/^Enrique signs in with the correct username and password$/) do
+  click_link('Sign in')
+  fill_in :username, :with => 'ecomba'
+  fill_in :password, :with => 's3cr3t'
+  click_button('Sign in')
+end
+
+When(/^Enrique signs in with the incorrect password$/) do
+  click_link('Sign in')
+  fill_in :username, :with => 'ecomba'
+  fill_in :password, :with => 'nots3cr3t'
+  click_button('Sign in')
+end

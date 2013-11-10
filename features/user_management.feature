@@ -1,6 +1,6 @@
 Feature: In order to be able to post peeps
-        As a user of the site
-        I need to be able to sign in and out
+        As a new or existing user of the site
+        I need to be able to sign up
 
         Background: No user logged in
                 Given I am on the homepage
@@ -23,3 +23,15 @@ Feature: In order to be able to post peeps
                 When Enrique signs up
                 And Nadia signs up with the same username as Enrique
                 Then I should see "This username is already taken."
+
+        Scenario: Signing in with the correct credentials
+                Given Enrique is an existing user
+                When Enrique signs in with the correct username and password
+                Then I should see "Hi, Enrique!"
+
+
+        Scenario: Signing in with the incorrect credentials 
+                Given Enrique is an existing user
+                When Enrique signs in with the incorrect password
+                Then I should not see "Hi, Enrique!"
+                And I should see "The username or password are incorrect. Please try again."
