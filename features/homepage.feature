@@ -14,6 +14,10 @@ Feature: Hompage structure
                 Then I should see "Sign up"
                 And I should see "Sign in"
 
-        Scenario: Adding peeps
-                Then I should see "Peep"
+        Scenario: No peeping when not logged in
+                Then I should not see "Peep"
 
+        Scenario: Peep when signed in
+                Given Enrique is an existing user
+                When Enrique signs in with the correct username and password
+                Then I should see "Peep"

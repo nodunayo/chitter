@@ -68,17 +68,6 @@ class Chitter < Sinatra::Base
     redirect to('/')
   end
 
-
-  #   name = params["name"]
-  #   url = params["url"]
-  #   description = params["description"]
-  #   tags = params["tags"].split(",").map do |tag|
-  #     Tag.first_or_create(:text => tag.strip)
-  #   end
-  #   Link.create(:name => name, :url => url, :description => description, :tags => tags)
-  #   redirect to('/')
-  # end
-
 helpers do
 
   def current_user    

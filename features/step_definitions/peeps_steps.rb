@@ -20,9 +20,3 @@ Given(/^Enrique has submitted the following peep:$/) do |peeps|
 end
 
 
-Then(/^I should see "(.*?)":$/) do |created_at, peeps|
-   peeps.hashes.each do |peep|
-    new_peep = Peep.create(:body => peep["body"], :created_at => peep["created_at"], :user_id => peep["user_id"])
-    expect('/').to include created_at
-  end
-end

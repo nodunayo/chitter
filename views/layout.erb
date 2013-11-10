@@ -9,7 +9,9 @@
       <h1>Chitter</h1>
       <a href='/users/new'>Sign up</a>
       <a href='/sessions/new'>Sign in</a>
-      <a href='/addpeep'>Peep</a>
+      <% if current_user %>
+        <a href='/addpeep'>Peep</a>
+      <% end %>
     </header>
     <body>
       <% if flash[:notice] %>

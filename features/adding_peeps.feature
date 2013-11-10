@@ -15,3 +15,4 @@ Feature: Adding peeps
                 Then I should see "I am a master coder!"
                 And I should see "ecomba"
                 And I should see "Enrique Comba Riepenhausen"
+

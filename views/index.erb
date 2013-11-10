@@ -2,5 +2,6 @@
   <p><%= peep.body %></p>
   <p><%= peep.user.username %></p>
   <p><%= peep.user.first_name %> <%= peep.user.last_name %></p>
-  <p><%= peep.created_at %></p>
+  <p><%= peep.created_at.strftime('%H:%M') %></p>
+  <br>
 <% end %>
