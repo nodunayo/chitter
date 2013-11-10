@@ -52,4 +52,8 @@ describe User do
     expect(user).to respond_to :password
   end
 
+  # it 'can create peeps' do
+  #   expect(user).to respond_to :peeps
+  # end
+
 end

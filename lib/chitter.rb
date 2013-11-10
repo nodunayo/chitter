@@ -56,6 +56,28 @@ class Chitter < Sinatra::Base
     redirect to('/')
   end
 
+  get '/addpeep' do
+    erb :add_peep
+  end
+
+  post '/addpeep' do
+    body = params["body"]
+    created_at = Time.new
+    user_id = session[:user_id]
+    Peep.create(:body => body, :created_at => created_at, :user_id => user_id)
+    redirect to('/')
+  end
+
+
+  #   name = params["name"]
+  #   url = params["url"]
+  #   description = params["description"]
+  #   tags = params["tags"].split(",").map do |tag|
+  #     Tag.first_or_create(:text => tag.strip)
+  #   end
+  #   Link.create(:name => name, :url => url, :description => description, :tags => tags)
+  #   redirect to('/')
+  # end
 
 helpers do
 

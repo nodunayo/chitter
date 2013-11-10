@@ -16,6 +16,8 @@ class User
 
   validates_confirmation_of :password, message: "Your passwords didn't match!"
 
+  # has n, :peeps, :through => Resource
+
   def password= password
     @password = password
     self.password_digest = BCrypt::Password.create(password)
