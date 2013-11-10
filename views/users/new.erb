@@ -1,0 +1,19 @@
+<% if flash[:errors] && !flash[:errors].empty? %>
+  Sorry, there were the following problems with the form:  
+  <ul id="error">
+    <% flash[:errors].each do |error| %>
+      <li><%= error %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/users" method="post">
+First name: <input name="first_name" type="text" value="<%= @user.first_name %>">
+Last name: <input name="last_name" type="text" value="<%= @user.last_name %>">
+Email: <input name="email" type="text" value="<%= @user.email %>">
+Username: <input name="username" type="text" value="<%= @user.username %>">
+Password: <input name="password" type="password">
+Password confirmation: <input name="password_confirmation" type="password">
+<input type="submit" value="Sign up">
+</form>
+

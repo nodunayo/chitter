@@ -7,10 +7,14 @@
   <body>
     <header>
       <h1>Chitter</h1>
-      Sign up
+      <a href='users/new'>Sign up</a>
       Sign in
       Peep
     </header>
+    <body>
+  <% if current_user %>
+    Hi, <%= current_user.first_name %>!
+  <% end %>
     <%= yield %>
   </body>
 

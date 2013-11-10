@@ -82,6 +82,8 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rack (1.5.2)
+    rack-flash3 (1.0.5)
+      rack
     rack-protection (1.5.1)
       rack
     rack-test (0.6.2)
@@ -116,12 +118,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   capybara
   cucumber
   cucumber-sinatra
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  rack-flash3
   rspec
   sinatra
   sinatra-base
