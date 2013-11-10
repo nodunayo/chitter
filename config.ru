@@ -1,5 +1,5 @@
-require './lib/server'
+require './app/server'
 
-require File.join(File.dirname(__FILE__), 'lib/chitter.rb')
+require File.join(File.dirname(__FILE__), 'app/controllers/chitter.rb')
 
 run Chitter

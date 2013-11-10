@@ -1,5 +1,5 @@
 require 'data_mapper'
-require 'peep'
+require_relative '../app/models/peep'
 
 
 describe Peep do

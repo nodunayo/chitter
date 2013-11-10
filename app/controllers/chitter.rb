@@ -1,13 +1,14 @@
 require 'sinatra/base'
 require 'rack-flash'
-require_relative 'server'
+require_relative '../server'
 
 class Chitter < Sinatra::Base
 
   use Rack::Flash
 
   set :views, File.join(File.dirname(__FILE__), '..', 'views')
-
+  set :public_folder, File.join(File.dirname(__FILE__), '..', '..', 'public')
+  
   enable :sessions
   set :session_secret, 'zombies'
   
@@ -75,7 +76,6 @@ helpers do
   end
 
 end
-
 
   # start the server if ruby file executed directly
   run! if app_file == $0
