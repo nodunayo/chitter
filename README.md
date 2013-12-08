@@ -1,22 +1,36 @@
-chitter
-=======
+#Chitter 
+##Makers Academy Week 6 Test
 
-The exercise was the Week 6 challenge at Makers Academy.
 
-The aim was to write a Twitter clone, called Chitter, that will allow users to post messages to a public stream.
+###Aim
 
-The app has the following features:
+The aim of this test was to write a Twitter clone that will allow the users to post messages to a public stream.
 
-- Sign up to Chitter
-- Sign in to Chitter
-- Sign out of Chitter
-- View peeps whether logged in or not
-- Post peeps if logged in
+It provided good practice of Cucumber/Capybara BDD approaches.
 
-Bcrypt is used to secure the passwords, and DataMapper and Postgres are used to save the data.
+###Other details
 
-Futher improvements to be made:
+The task was set by Enrique Comba Riepenhausen, [@ecomba](http://www.github.com/ecomba)
 
-- Add functionality to reply to certain peeps
-- Further refactoring of the code, including partials, and separating out helpers
-- CSS developments to improve design
+User management features were implemented manually, without the use of a gem.
+
+*Bcrypt* was used to ensure password security
+
+*Datamapper* and *PostgreSQL* were used for data storage
+
+###Features
+
+* Users can sign up, sign in, and sign out
+* Users can post messages (peeps) to a public feed which is displayed on the homepage
+* Any visitor can view this public feed
+* Only registed users can post peeps
+* Peeps have a timestamp and are placed in chronological order, with the lastest peep at the top of the page
+* 
+
+###To do
+
+
+* Further refactoring of the code, including partials, and separating out helpers
+* Enable users to reply to individual peeps and start conversations
+* User Websockets to enable real time posting of peeps and chat functionality
+* CSS developments to improve design
