@@ -25,7 +25,6 @@ User management features were implemented manually, without the use of a gem.
 * Any visitor can view this public feed
 * Only registed users can post peeps
 * Peeps have a timestamp and are placed in chronological order, with the lastest peep at the top of the page
-* 
 
 ###To do
 
